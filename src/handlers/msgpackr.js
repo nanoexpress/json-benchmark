@@ -1,31 +1,19 @@
-import { pack, unpack } from 'msgpackr';
+import { Packr, pack, unpack } from 'msgpackr';
 import { BasePreare } from '../base/index.js';
 
-const fromHandler = () => pack;
-const toHandler = () => unpack;
-/*const config = {
-  cache: null,
-  mapsAsObjects: true,
-  getStructures() {
-    return this.cache || [];
-  },
-  saveStructures(structures) {
-    this.cache = pack(structures);
-  }
-};*/
+const fromHandler = packr => data => packr.pack(data);
+const toHandler = packr => data => packr.unpack(data);
 
-const getAllHandler = new BasePreare({});
-// getAllHandler.compiler = new Packr({ ...config });
+const getAllHandler = new BasePreare(new Packr());
 getAllHandler.setSerializer(fromHandler);
 getAllHandler.setDeserializer(toHandler);
 
-const getOneHandler = new BasePreare({});
-// getAllHandler.compiler = new Packr({ ...config });
+// provide a structures array if we want to preserve the structure across test iterations
+const getOneHandler = new BasePreare(new Packr({ structures: [] }));
 getOneHandler.setSerializer(fromHandler);
 getOneHandler.setDeserializer(toHandler);
 
-const healthHandler = new BasePreare({});
-// getAllHandler.compiler = new Packr({ ...config });
+const healthHandler = new BasePreare(new Packr({ structures: [] }));
 healthHandler.setSerializer(fromHandler);
 healthHandler.setDeserializer(toHandler);
 
