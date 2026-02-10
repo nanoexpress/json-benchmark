@@ -1,8 +1,8 @@
 import fastJsonStringify from 'fast-json-stringify';
 import { BasePreare } from '../base/index.js';
-import getAllSchema from '../schema/json-schema/get-all.json';
-import getOneSchema from '../schema/json-schema/get-one.json';
-import healthSchema from '../schema/json-schema/health.json';
+import getAllSchema from '../schema/json-schema/get-all.json' with { type: 'json' };
+import getOneSchema from '../schema/json-schema/get-one.json' with { type: 'json' };
+import healthSchema from '../schema/json-schema/health.json' with { type: 'json' };
 
 const getAllHandler = new BasePreare(getAllSchema);
 getAllHandler.setSerializer(fastJsonStringify);

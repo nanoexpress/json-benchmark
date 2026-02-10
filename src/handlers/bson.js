@@ -1,8 +1,8 @@
-import BSON from 'bson';
+import { serialize, deserialize } from 'bson';
 import { BasePreare } from '../base/index.js';
 
-const fromHandler = () => BSON.serialize;
-const toHandler = () => BSON.deserialize;
+const fromHandler = () => (data) => serialize({ items: data });
+const toHandler = () => (data) => deserialize(data).items;
 
 const getAllHandler = new BasePreare({});
 getAllHandler.setSerializer(fromHandler);
