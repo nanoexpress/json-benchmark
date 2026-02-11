@@ -1,5 +1,5 @@
 import Benchmark from 'benchmark';
-import getAllData from '../../data/get-all.json';
+import getAllData from '../../data/get-all.json' with { type: 'json' };
 import { getAllHandler as avscGetAllHandler } from '../../handlers/avsc.js';
 import { getAllHandler as bserGetAllHandler } from '../../handlers/bser.js';
 import { getAllHandler as BSONGetAllHandler } from '../../handlers/bson.js';
