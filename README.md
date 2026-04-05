@@ -5,13 +5,13 @@
 ## Requires
 
 - Node.js v15.10+
-- `yarn` installed
+- `npm`/`yarn`/`bun` installed
 
 ## How to use
 
 ```bash
-yarn
-yarn benchmark
+bun install
+bun run benchmark
 ```
 
 ## Used libraries for benchmarking
