@@ -4,7 +4,7 @@
   "type": "module",
   "main": "src/benchmark.js",
   "engines": {
-    "node": ">=15.10"
+    "node": ">=24.11.0"
   },
   "scripts": {
     "benchmark": "node src/benchmark.js"
@@ -17,12 +17,15 @@
     "bson": "^7.2.0",
     "fast-json-stringify": "^6.3.0",
     "js-binary": "^1.2.0",
-    "msgpackr": "^1.11.8",
-    "protobufjs": "^8.0.0"
+    "msgpackr": "^1.11.9",
+    "protobufjs": "^8.0.1"
   },
   "license": "MIT",
   "devDependencies": {
     "prettier": "^3.8.1",
     "prettier-config-airlight": "^6.0.5"
-  }
+  },
+  "trustedDependencies": [
+    "protobufjs"
+  ]
 }
