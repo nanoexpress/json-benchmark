@@ -1,4 +1,4 @@
-import avroAvsc from 'avsc';
+import { Type } from 'avsc';
 import { BasePreare } from '../base/index.js';
 import getAllSchema from '../schema/avro-schema/get-all.json' with { type: 'json' };
 import getOneSchema from '../schema/avro-schema/get-one.json' with { type: 'json' };
@@ -8,17 +8,17 @@ const fromHandler = () => (data, self) => self.compiler.toBuffer(data);
 const toHandler = () => (data, self) => self.compiler.fromBuffer(data);
 
 const getAllHandler = new BasePreare(getAllSchema);
-getAllHandler.compiler = avroAvsc.Type.forSchema(getAllHandler.schema);
+getAllHandler.compiler = Type.forSchema(getAllHandler.schema);
 getAllHandler.setSerializer(fromHandler);
 getAllHandler.setDeserializer(toHandler);
 
 const getOneHandler = new BasePreare(getOneSchema);
-getOneHandler.compiler = avroAvsc.Type.forSchema(getOneHandler.schema);
+getOneHandler.compiler = Type.forSchema(getOneHandler.schema);
 getOneHandler.setSerializer(fromHandler);
 getOneHandler.setDeserializer(toHandler);
 
 const healthHandler = new BasePreare(healthSchema);
-healthHandler.compiler = avroAvsc.Type.forSchema(healthHandler.schema);
+healthHandler.compiler = Type.forSchema(healthHandler.schema);
 healthHandler.setSerializer(fromHandler);
 healthHandler.setDeserializer(toHandler);
 
