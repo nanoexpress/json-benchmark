@@ -1,3 +1,4 @@
+import { bench, describe } from 'vitest';
 import getAllData from '../../data/get-all.json' with { type: 'json' };
 import { getAllHandler as avscGetAllHandler } from '../../handlers/avsc.js';
 import { getAllHandler as bserGetAllHandler } from '../../handlers/bser.js';
@@ -8,7 +9,6 @@ import { getAllHandler as msgpackGetAllHandler } from '../../handlers/msgpack.js
 import { getAllHandler as msgpackRGetAllHandler } from '../../handlers/msgpackr.js';
 import { getAllHandler as protobufGetAllHandler } from '../../handlers/protobuf.js';
 import { getAllHandler as v8GetAllHandler } from '../../handlers/v8.js';
-import { describe, bench } from 'vitest';
 
 /**
  * DO NOT TOUCH
