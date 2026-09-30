@@ -24,77 +24,50 @@ const globalBenchConfig = {
 
 describe('serialization', () => {
   test('getAll: fast-json-stringify', async ({ bench }) => {
-    await bench(
-      'getAll: fast-json-stringify',
-      () => {
-        jsonSchemaGetAllHandler.serialize(getAllData);
-      }
-    ).run(globalBenchConfig);
+    await bench('getAll: fast-json-stringify', () => {
+      jsonSchemaGetAllHandler.serialize(getAllData);
+    }).run(globalBenchConfig);
   });
   test('getAll: msgpackR.pack', async ({ bench }) => {
-    await bench(
-      'getAll: msgpackR.pack',
-      () => {
-        msgpackRGetAllHandler.serialize(getAllData);
-      }
-    ).run(globalBenchConfig);
+    await bench('getAll: msgpackR.pack', () => {
+      msgpackRGetAllHandler.serialize(getAllData);
+    }).run(globalBenchConfig);
   });
   test('getAll: msgpack.encode', async ({ bench }) => {
-    await bench(
-      'getAll: msgpack.encode',
-      () => {
-        msgpackGetAllHandler.serialize(getAllData);
-      }
-    ).run(globalBenchConfig);
+    await bench('getAll: msgpack.encode', () => {
+      msgpackGetAllHandler.serialize(getAllData);
+    }).run(globalBenchConfig);
   });
   test('getAll: avsc.toBuffer', async ({ bench }) => {
-    await bench(
-      'getAll: avsc.toBuffer',
-      () => {
-        avscGetAllHandler.serialize(getAllData);
-      }
-    ).run(globalBenchConfig);
+    await bench('getAll: avsc.toBuffer', () => {
+      avscGetAllHandler.serialize(getAllData);
+    }).run(globalBenchConfig);
   });
   test('getAll: js-binary.encode', async ({ bench }) => {
-    await bench(
-      'getAll: js-binary.encode',
-      () => {
-        jsBinaryGetAllHandler.serialize(getAllData);
-      }
-    ).run(globalBenchConfig);
+    await bench('getAll: js-binary.encode', () => {
+      jsBinaryGetAllHandler.serialize(getAllData);
+    }).run(globalBenchConfig);
   });
   test('getAll: v8.serialize', async ({ bench }) => {
-    await bench(
-      'getAll: v8.serialize',
-      () => {
-        v8GetAllHandler.serialize(getAllData);
-      }
-    ).run(globalBenchConfig);
+    await bench('getAll: v8.serialize', () => {
+      v8GetAllHandler.serialize(getAllData);
+    }).run(globalBenchConfig);
   });
   test('getAll: protobuf.encode', async ({ bench }) => {
-    await bench(
-      'getAll: protobuf.encode',
-      () => {
-        protobufGetAllHandler.serialize({
-          items: getAllData
-        });
-      }
-    ).run(globalBenchConfig);
+    await bench('getAll: protobuf.encode', () => {
+      protobufGetAllHandler.serialize({
+        items: getAllData
+      });
+    }).run(globalBenchConfig);
   });
   test('getAll: bson.serialize', async ({ bench }) => {
-    await bench(
-      'getAll: bson.serialize',
-      () => {
-        BSONGetAllHandler.serialize(getAllData);
-      }
-    ).run(globalBenchConfig);
+    await bench('getAll: bson.serialize', () => {
+      BSONGetAllHandler.serialize(getAllData);
+    }).run(globalBenchConfig);
   });
   test('getAll: bser.dumpToBuffer', async ({ bench }) => {
-    await bench(
-      'getAll: bser.dumpToBuffer',
-      () => {
-        bserGetAllHandler.serialize(getAllData);
-      }
-    ).run(globalBenchConfig);
+    await bench('getAll: bser.dumpToBuffer', () => {
+      bserGetAllHandler.serialize(getAllData);
+    }).run(globalBenchConfig);
   });
 });

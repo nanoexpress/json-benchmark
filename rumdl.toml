@@ -1,0 +1,6 @@
+# Markdown lint/format (replaces Prettier for .md files)
+# https://rumdl.dev/configuration
+
+# Long benchmark-output lines in code blocks are intentional;
+# README badge markup uses inline HTML on purpose
+disable = ["MD013", "MD033"]

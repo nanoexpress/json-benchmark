@@ -17,8 +17,6 @@ class BasePreare {
 
     this.deserializer = null;
     this.serializer = null;
-
-    return this;
   }
 
   /**
