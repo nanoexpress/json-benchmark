@@ -7,7 +7,7 @@
     "node": ">=24.11.0"
   },
   "scripts": {
-    "lint": "biome check . && rumdl check .",
+    "lint": "biome check . && oxlint . && rumdl check .",
     "format": "biome check --write . && rumdl fmt .",
     "benchmark": "node src/suites/serialize/get-all.bench.js && node src/suites/deserialize/get-all.bench.js",
     "prepare": "lefthook install"
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.5.15",
     "lefthook": "^2.1.15",
+    "oxlint": "^1.86.0",
     "rumdl": "^0.2.78"
   },
   "trustedDependencies": [
