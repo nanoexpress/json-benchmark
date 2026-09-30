@@ -1,6 +1,10 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
-  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
@@ -13,6 +17,14 @@
       "trailingCommas": "none",
       "arrowParentheses": "always",
       "bracketSameLine": true
+    }
+  },
+  "linter": {
+    "rules": {
+      "correctness": {
+        "noUnusedVariables": "warn",
+        "noUnusedFunctionParameters": "warn"
+      }
     }
   }
 }
