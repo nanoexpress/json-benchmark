@@ -140,6 +140,6 @@
 
     "rumdl": ["rumdl@0.2.78", "", { "optionalDependencies": { "@rumdl/cli-darwin-arm64": "0.2.78", "@rumdl/cli-darwin-x64": "0.2.78", "@rumdl/cli-linux-arm64": "0.2.78", "@rumdl/cli-linux-arm64-musl": "0.2.78", "@rumdl/cli-linux-x64": "0.2.78", "@rumdl/cli-linux-x64-musl": "0.2.78", "@rumdl/cli-win32-x64": "0.2.78" }, "bin": { "rumdl": "bin/rumdl" } }, "sha512-nm40qNFQnrpYiLetMrsq14qaItqKT7cUoi7wtlTtx0n/3xWn6a7/ZwkgChvBbfP24cZQYz1n5IJ+DBPIrQQfFQ=="],
 
-    "ajv/fast-uri": ["fast-uri@3.1.0", "", {}, "sha512-iPeeDKJSWf4IEOasVVrknXpaBV0IApz/gp7S2bb7Z4Lljbl2MGJRqInZiUrQwV16cpzw/D3S5j5Julj/gT52AA=="],
+    "ajv/fast-uri": ["fast-uri@3.1.8", "", {}, "sha512-GZMtZUTNRpOVIECoXwLNZS5xUGE+mVNbTB8h/7Rwh2TFWcBQiPzTgyZi05BF9UMZKkLJv8XBRJTlU7zg8+ZfMg=="],
   }
 }
