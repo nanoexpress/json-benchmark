@@ -1,4 +1,7 @@
-import { Type } from 'avsc';
+import avsc from 'avsc';
+
+const { Type } = avsc;
+
 import { BasePreare } from '../base/index.js';
 import getAllSchema from '../schema/avro-schema/get-all.json' with {
   type: 'json'
