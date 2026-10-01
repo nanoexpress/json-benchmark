@@ -1,0 +1,6 @@
+# typos spell-check config
+# https://github.com/crate-ci/typos
+
+[files]
+# generated fake user/place data, real names are intentional
+extend-exclude = ["src/data/get-all.json"]
