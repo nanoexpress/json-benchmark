@@ -3,4 +3,5 @@
 
 # Long benchmark-output lines in code blocks are intentional;
 # README badge markup uses inline HTML on purpose
+[global]
 disable = ["MD013", "MD033"]
